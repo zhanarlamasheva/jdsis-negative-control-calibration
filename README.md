@@ -26,6 +26,7 @@ All real-data scripts use seed 20260626; the sign bootstrap uses 2,000 student-c
 python code/analysis/reanalysis_oulad.py --data /path/to/OULAD --out results/real_data
 python code/analysis/reanalysis_xes.py --source /path/to/train_valid_sequences_quelevel.csv --out results/real_data
 python code/reporting/table4_drop_one.py results/real_data/oulad_reanalysis.json
+python code/reporting/figure2_real_panels.py results/real_data figure2_panels_CD.png
 ```
 
 Each re-analysis script writes a JSON file with every reported number and a Markdown summary.
@@ -47,12 +48,13 @@ The JSON files used for the article are saved in `results/real_data/`. Do not us
 | Table 7; Section 5.3 | `run_xes3g5m_sensitivity.py` | console and saved JSON |
 | Table 8; Section 5.4 | `reanalysis_xes.py` | `modes.fixed` |
 | Section 5.2 cleaning counts | `reanalysis_xes.py` | `provenance` |
-| Table 9 (binary simulation) | `code/simulations/run_binary_validation.py` | `results/binary_results/` |
+| Table 9 (binary simulation) | `code/simulations/run_binary_validation.py` | written to `binary_results/` next to the script; not saved in this repository |
 | Table 10 (Gaussian stress test) | `code/simulations/run_experiments.py` | console |
-| Table 11 (binary AIPW stress test) | `code/simulations/run_binary_stress.py` | `binary_results/` next to the script |
+| Table 11 (binary AIPW stress test) | `code/simulations/run_binary_stress.py` | `results/binary_results/` (seed 20261031) |
 | Control-only factor scenario (Section 6) | `code/simulations/run_control_only_factor.py` | console |
 | Tables 12–13 (two-factor OULAD experiment) | `code/simulations/run_oulad_two_factors.py` | `results/oulad_two_factors/` |
-| Figures | `code/reporting/` | `results/figure/` |
+| Figure 2, panels C–D | `code/reporting/figure2_real_panels.py` | `results/figure/figure2_audit_summary.png`, from both re-analysis JSON files |
+| Other figures | `code/reporting/` | `results/figure/` |
 
 ## Repository structure
 
