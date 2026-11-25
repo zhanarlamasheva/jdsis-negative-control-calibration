@@ -1,0 +1,1211 @@
+{
+  "settings": {
+    "data": "\u0434\u0430\u0442\u0430\u0441\u0435\u0442/oulad",
+    "out": "jdsis_reanalysis/results_matched",
+    "presentations": [
+      "2013B",
+      "2013J"
+    ],
+    "landmark_days": 7,
+    "threshold": 0.95,
+    "sign_boot": 2000,
+    "pipeline_boot": 0,
+    "fast": false
+  },
+  "coding_audit": {
+    "registrations": 5859,
+    "on_time_non_banked": 4690,
+    "on_time_banked": 32,
+    "late_submission": 943,
+    "no_submission": 194,
+    "no_submission_withdrew_before_deadline": 79,
+    "withdrew_before_deadline_any": 87,
+    "withdrew_before_deadline_coded_T0": 81,
+    "registered_after_deadline": 0,
+    "banked_any": 32,
+    "early_submitters": 3721,
+    "early_submitters_with_clicks_after_submission": 1727,
+    "median_share_of_window_clicks_after_submission": 0.0,
+    "coding_in_manuscript": "T=1 if the first assessment was submitted on or before its deadline (banked included); late, missing and withdrawn-before-deadline registrations coded T=0"
+  },
+  "landmark_flow": {
+    "all": 5859,
+    "registered_by_L": 5857,
+    "not_withdrawn_by_L": 5794,
+    "not_banked": 5763,
+    "not_submitted_by_L": 5292,
+    "strict_no_withdrawal_before_deadline": 5270
+  },
+  "designs": {
+    "reference": {
+      "n": 5859,
+      "n_common_support": 5563,
+      "n_students": 5528,
+      "treated_share": 0.8059395801331285,
+      "imd_missing": 273,
+      "estimates": {
+        "not_withdrawn": {
+          "estimate": 0.14605328552927987,
+          "se": 0.025194171656534398,
+          "proxy_correlation": 0.06372317035116655
+        },
+        "successful_completion": {
+          "estimate": 0.2674790805074116,
+          "se": 0.027609441619810965,
+          "proxy_correlation": 0.11203418320582284
+        },
+        "disability": {
+          "estimate": -0.04133504858280689,
+          "se": 0.017821653664275995,
+          "proxy_correlation": -0.02185034206579936
+        },
+        "male": {
+          "estimate": -0.012233158626432738,
+          "se": 0.02625110712005803,
+          "proxy_correlation": 0.15469387607884905
+        },
+        "age_35_plus": {
+          "estimate": -0.033876379687263744,
+          "se": 0.026318531396201564,
+          "proxy_correlation": 0.12775594046723812
+        },
+        "higher_education": {
+          "estimate": 0.014332058231975475,
+          "se": 0.019854790148048744,
+          "proxy_correlation": 0.03247441975075942
+        },
+        "imd_50_plus": {
+          "estimate": 0.02202946482041728,
+          "se": 0.02650367011401872,
+          "proxy_correlation": 0.019921351130999264
+        },
+        "previous_attempts": {
+          "estimate": -0.05502530268683208,
+          "se": 0.021051694011533208,
+          "proxy_correlation": -0.04512294197977481
+        }
+      },
+      "targets": {
+        "not_withdrawn": {
+          "raw": 0.14605328552927987,
+          "raw_ci": [
+            0.09667361646215263,
+            0.19543295459640714
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.014435389334722541,
+          "spread": 0.023557143794183603,
+          "corrected": 0.13161789619455733,
+          "mom_ci": [
+            0.06401518082844344,
+            0.19922061156067122
+          ],
+          "cov_ci": [
+            0.07719274870555877,
+            0.1860430436835559
+          ]
+        },
+        "successful_completion": {
+          "raw": 0.2674790805074116,
+          "raw_ci": [
+            0.21336556929932088,
+            0.3215925917155023
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.014435389334722541,
+          "spread": 0.023557143794183603,
+          "corrected": 0.25304369117268904,
+          "mom_ci": [
+            0.18190968029912052,
+            0.32417770204625757
+          ],
+          "cov_ci": [
+            0.19465954437866356,
+            0.3114278379667145
+          ]
+        }
+      },
+      "drop_one": {
+        "not_withdrawn": {
+          "disability": 0.1369978280441742,
+          "male": 0.12628418660232626,
+          "age_35_plus": 0.12195554239016007,
+          "higher_education": 0.1315972299740079,
+          "imd_50_plus": 0.13313671129169627,
+          "previous_attempts": 0.13973587886497923
+        },
+        "successful_completion": {
+          "disability": 0.2584236230223059,
+          "male": 0.24770998158045798,
+          "age_35_plus": 0.2433813373682918,
+          "higher_education": 0.25302302495213963,
+          "imd_50_plus": 0.254562506269828,
+          "previous_attempts": 0.26116167384311095
+        }
+      },
+      "loco": {
+        "rows": [
+          {
+            "control": "disability",
+            "raw": -0.04133504858280689,
+            "corrected": -0.03227959109770122,
+            "excludes_zero": false
+          },
+          {
+            "control": "male",
+            "raw": -0.012233158626432738,
+            "corrected": -0.032002257553386336,
+            "excludes_zero": false
+          },
+          {
+            "control": "age_35_plus",
+            "raw": -0.033876379687263744,
+            "corrected": -0.05797412282638354,
+            "excludes_zero": true
+          },
+          {
+            "control": "higher_education",
+            "raw": 0.014332058231975475,
+            "corrected": -0.00012399732329647882,
+            "excludes_zero": false
+          },
+          {
+            "control": "imd_50_plus",
+            "raw": 0.02202946482041728,
+            "corrected": 0.009112890582833686,
+            "excludes_zero": false
+          },
+          {
+            "control": "previous_attempts",
+            "raw": -0.05502530268683208,
+            "corrected": -0.04870789602253145,
+            "excludes_zero": false
+          }
+        ],
+        "raw_rmse": 0.03347719288623813,
+        "corrected_rmse": 0.03624599907228679,
+        "excluded": 1,
+        "k": 6
+      },
+      "sign_stability_common_support": {
+        "marginal": {
+          "not_withdrawn": {
+            "correlation": 0.06372317035116658,
+            "ci95": [
+              0.040136563228654096,
+              0.08641837737386562
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.11203418320582291,
+            "ci95": [
+              0.08925118195549073,
+              0.1348939032623659
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.02185034206579936,
+            "ci95": [
+              -0.04971879798024913,
+              0.006963174348944667
+            ],
+            "sign_retention": 0.9385
+          },
+          "male": {
+            "correlation": 0.15469387607884919,
+            "ci95": [
+              0.12912117522200367,
+              0.18040636052722211
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.127755940467238,
+            "ci95": [
+              0.0999353356676773,
+              0.1563356800353472
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.03247441975075937,
+            "ci95": [
+              0.007911894322913523,
+              0.05999393745718277
+            ],
+            "sign_retention": 0.9945
+          },
+          "imd_50_plus": {
+            "correlation": 0.019921351130999212,
+            "ci95": [
+              -0.005798472501079661,
+              0.04776906778761139
+            ],
+            "sign_retention": 0.9395
+          },
+          "previous_attempts": {
+            "correlation": -0.045122941979774796,
+            "ci95": [
+              -0.07004588181127387,
+              -0.020254435165038453
+            ],
+            "sign_retention": 0.9995
+          }
+        },
+        "orientation_changes": {
+          "not_withdrawn": {
+            "any_control_flips": 0.1245,
+            "per_control_flip_rate": {
+              "disability": 0.0615,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.0055,
+              "imd_50_plus": 0.0605,
+              "previous_attempts": 0.0005
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.13161789619455733,
+              0.14539624572215964
+            ]
+          },
+          "successful_completion": {
+            "any_control_flips": 0.1245,
+            "per_control_flip_rate": {
+              "disability": 0.0615,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.0055,
+              "imd_50_plus": 0.0605,
+              "previous_attempts": 0.0005
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.25304369117268904,
+              0.26682204070029136
+            ]
+          }
+        },
+        "residualised": {
+          "not_withdrawn": {
+            "correlation": 0.062055724179251384,
+            "ci95": [
+              0.037359000378291284,
+              0.08527907591039907
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.10968273038607684,
+            "ci95": [
+              0.08664490399206624,
+              0.13258851235637867
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.01852751298693075,
+            "ci95": [
+              -0.04618881043268392,
+              0.011099953162228428
+            ],
+            "sign_retention": 0.903
+          },
+          "male": {
+            "correlation": 0.15253261165482573,
+            "ci95": [
+              0.12751469704777946,
+              0.17777440722609214
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.1275386369749871,
+            "ci95": [
+              0.10054705679121503,
+              0.1557225752119408
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.02452696279785453,
+            "ci95": [
+              -0.000854759014068274,
+              0.05248104437449909
+            ],
+            "sign_retention": 0.9715
+          },
+          "imd_50_plus": {
+            "correlation": 0.025929844724691505,
+            "ci95": [
+              -0.0008744113646907794,
+              0.05435265406415161
+            ],
+            "sign_retention": 0.9705
+          },
+          "previous_attempts": {
+            "correlation": -0.040809328571966536,
+            "ci95": [
+              -0.06430129722983674,
+              -0.01505738036263236
+            ],
+            "sign_retention": 0.9995
+          }
+        }
+      },
+      "stable_panel": {
+        "threshold": 0.95,
+        "controls": [
+          "male",
+          "age_35_plus",
+          "higher_education",
+          "previous_attempts"
+        ],
+        "targets": {
+          "not_withdrawn": {
+            "raw": 0.14605328552927987,
+            "raw_ci": [
+              0.09667361646215263,
+              0.19543295459640714
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": 0.005811955651277768,
+            "spread": 0.03017149102117624,
+            "corrected": 0.1402413298780021,
+            "mom_ci": [
+              0.06320040457411845,
+              0.21728225518188576
+            ],
+            "cov_ci": [
+              0.08215206147487097,
+              0.19833059828113325
+            ]
+          },
+          "successful_completion": {
+            "raw": 0.2674790805074116,
+            "raw_ci": [
+              0.21336556929932088,
+              0.3215925917155023
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": 0.005811955651277768,
+            "spread": 0.03017149102117624,
+            "corrected": 0.2616671248561338,
+            "mom_ci": [
+              0.18150962645599822,
+              0.3418246232562694
+            ],
+            "cov_ci": [
+              0.20023750792906547,
+              0.32309674178320213
+            ]
+          }
+        }
+      }
+    },
+    "landmark": {
+      "n": 5292,
+      "n_common_support": 5150,
+      "n_students": 5126,
+      "treated_share": 0.7962962962962963,
+      "imd_missing": 252,
+      "estimates": {
+        "not_withdrawn": {
+          "estimate": 0.12068607236886458,
+          "se": 0.024962015414726313,
+          "proxy_correlation": 0.05116340016604002
+        },
+        "successful_completion": {
+          "estimate": 0.29921584693096903,
+          "se": 0.027238378236539715,
+          "proxy_correlation": 0.10019284683187132
+        },
+        "disability": {
+          "estimate": -0.012984868953419833,
+          "se": 0.017348004544300317,
+          "proxy_correlation": -0.0077828580769098024
+        },
+        "male": {
+          "estimate": -0.02442687770679756,
+          "se": 0.026237139748886938,
+          "proxy_correlation": 0.13110674973577655
+        },
+        "age_35_plus": {
+          "estimate": -0.06662958454934838,
+          "se": 0.026491084117737648,
+          "proxy_correlation": 0.12526192378910092
+        },
+        "higher_education": {
+          "estimate": 0.0010266469762133309,
+          "se": 0.019549249321926945,
+          "proxy_correlation": 0.037361416160523644
+        },
+        "imd_50_plus": {
+          "estimate": 0.015946853797880745,
+          "se": 0.027972894902655133,
+          "proxy_correlation": 0.015066248343162468
+        },
+        "previous_attempts": {
+          "estimate": -0.07321512514520483,
+          "se": 0.02094593525231359,
+          "proxy_correlation": -0.04083082961594119
+        }
+      },
+      "targets": {
+        "not_withdrawn": {
+          "raw": 0.12068607236886458,
+          "raw_ci": [
+            0.07176142117446735,
+            0.16961072356326182
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.0020195054360954653,
+          "spread": 0.04012654710805823,
+          "corrected": 0.11866656693276911,
+          "mom_ci": [
+            0.026044176736124594,
+            0.21128895712941365
+          ],
+          "cov_ci": [
+            0.06830984467590354,
+            0.1690232891896347
+          ]
+        },
+        "successful_completion": {
+          "raw": 0.29921584693096903,
+          "raw_ci": [
+            0.24582960659007155,
+            0.3526020872718665
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.0020195054360954653,
+          "spread": 0.04012654710805823,
+          "corrected": 0.29719634149487356,
+          "mom_ci": [
+            0.2021417449254172,
+            0.3922509380643299
+          ],
+          "cov_ci": [
+            0.24373658350041327,
+            0.35065609948933385
+          ]
+        }
+      },
+      "drop_one": {
+        "not_withdrawn": {
+          "disability": 0.12085963963623399,
+          "male": 0.11337729030419051,
+          "age_35_plus": 0.10493674893568035,
+          "higher_education": 0.11846799524079268,
+          "imd_50_plus": 0.12145203660512617,
+          "previous_attempts": 0.13290569087459098
+        },
+        "successful_completion": {
+          "disability": 0.2993894141983384,
+          "male": 0.291907064866295,
+          "age_35_plus": 0.2834665234977848,
+          "higher_education": 0.29699776980289716,
+          "imd_50_plus": 0.2999818111672306,
+          "previous_attempts": 0.3114354654366954
+        }
+      },
+      "loco": {
+        "rows": [
+          {
+            "control": "disability",
+            "raw": -0.012984868953419833,
+            "corrected": -0.013158436220789242,
+            "excludes_zero": false
+          },
+          {
+            "control": "male",
+            "raw": -0.02442687770679756,
+            "corrected": -0.031735659771471636,
+            "excludes_zero": false
+          },
+          {
+            "control": "age_35_plus",
+            "raw": -0.06662958454934838,
+            "corrected": -0.08237890798253261,
+            "excludes_zero": true
+          },
+          {
+            "control": "higher_education",
+            "raw": 0.0010266469762133309,
+            "corrected": -0.0011914301518585627,
+            "excludes_zero": false
+          },
+          {
+            "control": "imd_50_plus",
+            "raw": 0.015946853797880745,
+            "corrected": 0.016712818034142336,
+            "excludes_zero": false
+          },
+          {
+            "control": "previous_attempts",
+            "raw": -0.07321512514520483,
+            "corrected": -0.08543474365093123,
+            "excludes_zero": true
+          }
+        ],
+        "raw_rmse": 0.042466832967136145,
+        "corrected_rmse": 0.050902544534386494,
+        "excluded": 2,
+        "k": 6
+      },
+      "sign_stability_common_support": {
+        "marginal": {
+          "not_withdrawn": {
+            "correlation": 0.05116340016603983,
+            "ci95": [
+              0.02598495100338583,
+              0.07447853247077192
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.1001928468318713,
+            "ci95": [
+              0.07631141119862216,
+              0.1238272003434368
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.007782858076909807,
+            "ci95": [
+              -0.03512468738300212,
+              0.021575879936238055
+            ],
+            "sign_retention": 0.7025
+          },
+          "male": {
+            "correlation": 0.1311067497357767,
+            "ci95": [
+              0.10675910408337097,
+              0.15585830165222986
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.12526192378910106,
+            "ci95": [
+              0.09370140027838197,
+              0.15679941815319745
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.037361416160523665,
+            "ci95": [
+              0.010999427162982998,
+              0.06439838627759582
+            ],
+            "sign_retention": 0.998
+          },
+          "imd_50_plus": {
+            "correlation": 0.015066248343162452,
+            "ci95": [
+              -0.011215834031593052,
+              0.043004388363011896
+            ],
+            "sign_retention": 0.869
+          },
+          "previous_attempts": {
+            "correlation": -0.040830829615941186,
+            "ci95": [
+              -0.06482130215931096,
+              -0.015380757663084296
+            ],
+            "sign_retention": 1.0
+          }
+        },
+        "orientation_changes": {
+          "not_withdrawn": {
+            "any_control_flips": 0.39,
+            "per_control_flip_rate": {
+              "disability": 0.2975,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.002,
+              "imd_50_plus": 0.131,
+              "previous_attempts": 0.0
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.11866656693276911,
+              0.128310474516536
+            ]
+          },
+          "successful_completion": {
+            "any_control_flips": 0.39,
+            "per_control_flip_rate": {
+              "disability": 0.2975,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.002,
+              "imd_50_plus": 0.131,
+              "previous_attempts": 0.0
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.29719634149487356,
+              0.30684024907864044
+            ]
+          }
+        },
+        "residualised": {
+          "not_withdrawn": {
+            "correlation": 0.04472415422543842,
+            "ci95": [
+              0.019077662792683876,
+              0.0685036598514864
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.09419828738174849,
+            "ci95": [
+              0.0701590507359152,
+              0.11791367188402915
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.0014791524753745835,
+            "ci95": [
+              -0.028803101304021566,
+              0.02866763281638968
+            ],
+            "sign_retention": 0.551
+          },
+          "male": {
+            "correlation": 0.1294758122834851,
+            "ci95": [
+              0.10529488996515643,
+              0.1545334500933799
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.12377382781019762,
+            "ci95": [
+              0.0923543083037485,
+              0.15548348344237484
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.029493224919877388,
+            "ci95": [
+              0.0035140099978468887,
+              0.05728237848243571
+            ],
+            "sign_retention": 0.986
+          },
+          "imd_50_plus": {
+            "correlation": 0.024996648300215175,
+            "ci95": [
+              -0.0029046021560373892,
+              0.05462184915223415
+            ],
+            "sign_retention": 0.9625
+          },
+          "previous_attempts": {
+            "correlation": -0.025945958189882955,
+            "ci95": [
+              -0.048906714162658335,
+              -0.0011364671351844382
+            ],
+            "sign_retention": 0.982
+          }
+        }
+      },
+      "stable_panel": {
+        "threshold": 0.95,
+        "controls": [
+          "male",
+          "age_35_plus",
+          "higher_education",
+          "previous_attempts"
+        ],
+        "targets": {
+          "not_withdrawn": {
+            "raw": 0.12068607236886458,
+            "raw_ci": [
+              0.07176142117446735,
+              0.16961072356326182
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": -0.004203672533681948,
+            "spread": 0.05375467793673454,
+            "corrected": 0.12488974490254653,
+            "mom_ci": [
+              0.008727065919100246,
+              0.24105242388599282
+            ],
+            "cov_ci": [
+              0.07342462234853188,
+              0.1763548674565612
+            ]
+          },
+          "successful_completion": {
+            "raw": 0.29921584693096903,
+            "raw_ci": [
+              0.24582960659007155,
+              0.3526020872718665
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": -0.004203672533681948,
+            "spread": 0.05375467793673454,
+            "corrected": 0.30341951946465096,
+            "mom_ci": [
+              0.18530839741488872,
+              0.4215306415144132
+            ],
+            "cov_ci": [
+              0.24985484604657565,
+              0.35698419288272626
+            ]
+          }
+        }
+      }
+    },
+    "landmark_strict": {
+      "n": 5270,
+      "n_common_support": 5118,
+      "n_students": 5096,
+      "treated_share": 0.7996204933586337,
+      "imd_missing": 252,
+      "estimates": {
+        "not_withdrawn": {
+          "estimate": 0.12144115547103645,
+          "se": 0.024212160180355574,
+          "proxy_correlation": 0.05320209188768328
+        },
+        "successful_completion": {
+          "estimate": 0.2828022532446724,
+          "se": 0.027563569227691362,
+          "proxy_correlation": 0.09680028526533702
+        },
+        "disability": {
+          "estimate": -0.03950203143748792,
+          "se": 0.017743740495470502,
+          "proxy_correlation": -0.009823598736392838
+        },
+        "male": {
+          "estimate": 0.008673304530470537,
+          "se": 0.02770201477593495,
+          "proxy_correlation": 0.13007498085286362
+        },
+        "age_35_plus": {
+          "estimate": -0.06716263908950605,
+          "se": 0.026766363460046058,
+          "proxy_correlation": 0.11944250709357829
+        },
+        "higher_education": {
+          "estimate": 0.010733281682897517,
+          "se": 0.019896441142696192,
+          "proxy_correlation": 0.03969685566778625
+        },
+        "imd_50_plus": {
+          "estimate": -0.012120551737869386,
+          "se": 0.02697754414035522,
+          "proxy_correlation": 0.011250855647215082
+        },
+        "previous_attempts": {
+          "estimate": -0.061679258932166456,
+          "se": 0.020934668154559927,
+          "proxy_correlation": -0.040007444492613745
+        }
+      },
+      "targets": {
+        "not_withdrawn": {
+          "raw": 0.12144115547103645,
+          "raw_ci": [
+            0.07398619352962471,
+            0.1688961174124482
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.006884114292607831,
+          "spread": 0.03775726529050649,
+          "corrected": 0.11455704117842862,
+          "mom_ci": [
+            0.026645724048463687,
+            0.20246835830839355
+          ],
+          "cov_ci": [
+            0.06462277495681376,
+            0.16449130740004347
+          ]
+        },
+        "successful_completion": {
+          "raw": 0.2828022532446724,
+          "raw_ci": [
+            0.2287786502730208,
+            0.336825856216324
+          ],
+          "orientation": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "signed_mean": 0.006884114292607831,
+          "spread": 0.03775726529050649,
+          "corrected": 0.2759181389520646,
+          "mom_ci": [
+            0.1842940376211207,
+            0.3675422402830084
+          ],
+          "cov_ci": [
+            0.21945235062212856,
+            0.33238392728200056
+          ]
+        }
+      },
+      "drop_one": {
+        "not_withdrawn": {
+          "disability": 0.12108062460740464,
+          "male": 0.11491487922600116,
+          "age_35_plus": 0.09974769050200585,
+          "higher_education": 0.11532687465648656,
+          "imd_50_plus": 0.11075610797233318,
+          "previous_attempts": 0.12551607010634036
+        },
+        "successful_completion": {
+          "disability": 0.2824417223810406,
+          "male": 0.27627597699963713,
+          "age_35_plus": 0.26110878827564177,
+          "higher_education": 0.2766879724301225,
+          "imd_50_plus": 0.2721172057459691,
+          "previous_attempts": 0.2868771678799763
+        }
+      },
+      "loco": {
+        "rows": [
+          {
+            "control": "disability",
+            "raw": -0.03950203143748792,
+            "corrected": -0.039141500573856104,
+            "excludes_zero": false
+          },
+          {
+            "control": "male",
+            "raw": 0.008673304530470537,
+            "corrected": 0.0021470282854352462,
+            "excludes_zero": false
+          },
+          {
+            "control": "age_35_plus",
+            "raw": -0.06716263908950605,
+            "corrected": -0.08885610405853667,
+            "excludes_zero": true
+          },
+          {
+            "control": "higher_education",
+            "raw": 0.010733281682897517,
+            "corrected": 0.004619000868347622,
+            "excludes_zero": false
+          },
+          {
+            "control": "imd_50_plus",
+            "raw": -0.012120551737869386,
+            "corrected": -0.02280559923657266,
+            "excludes_zero": false
+          },
+          {
+            "control": "previous_attempts",
+            "raw": -0.061679258932166456,
+            "corrected": -0.06575417356747035,
+            "excludes_zero": false
+          }
+        ],
+        "raw_rmse": 0.04125711833766758,
+        "corrected_rmse": 0.04881447171552562,
+        "excluded": 1,
+        "k": 6
+      },
+      "sign_stability_common_support": {
+        "marginal": {
+          "not_withdrawn": {
+            "correlation": 0.053202091887683316,
+            "ci95": [
+              0.029274710280164422,
+              0.07640707585858245
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.09680028526533706,
+            "ci95": [
+              0.07103877815685508,
+              0.12246559601130605
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.009823598736392842,
+            "ci95": [
+              -0.038211851126207494,
+              0.02130426732411718
+            ],
+            "sign_retention": 0.7475
+          },
+          "male": {
+            "correlation": 0.13007498085286368,
+            "ci95": [
+              0.10478922863334733,
+              0.15538154777388613
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.11944250709357829,
+            "ci95": [
+              0.08771607679727372,
+              0.1513436230736073
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.03969685566778629,
+            "ci95": [
+              0.012599766015314597,
+              0.06853206000192454
+            ],
+            "sign_retention": 0.9985
+          },
+          "imd_50_plus": {
+            "correlation": 0.011250855647215008,
+            "ci95": [
+              -0.01435387269990506,
+              0.04067452105362802
+            ],
+            "sign_retention": 0.8025
+          },
+          "previous_attempts": {
+            "correlation": -0.040007444492613786,
+            "ci95": [
+              -0.0647391170153092,
+              -0.013835173834355403
+            ],
+            "sign_retention": 0.9975
+          }
+        },
+        "orientation_changes": {
+          "not_withdrawn": {
+            "any_control_flips": 0.4005,
+            "per_control_flip_rate": {
+              "disability": 0.2525,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.0015,
+              "imd_50_plus": 0.1975,
+              "previous_attempts": 0.0025
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.1105168572658055,
+              0.1277243849909246
+            ]
+          },
+          "successful_completion": {
+            "any_control_flips": 0.4005,
+            "per_control_flip_rate": {
+              "disability": 0.2525,
+              "male": 0.0,
+              "age_35_plus": 0.0,
+              "higher_education": 0.0015,
+              "imd_50_plus": 0.1975,
+              "previous_attempts": 0.0025
+            },
+            "signed_estimate_sign_only_ci95": [
+              0.27187795503944145,
+              0.28908548276456053
+            ]
+          }
+        },
+        "residualised": {
+          "not_withdrawn": {
+            "correlation": 0.047190561843619847,
+            "ci95": [
+              0.02233523083877384,
+              0.07114598916215328
+            ],
+            "sign_retention": 1.0
+          },
+          "successful_completion": {
+            "correlation": 0.09047335120122768,
+            "ci95": [
+              0.06519754093722363,
+              0.11634705561412857
+            ],
+            "sign_retention": 1.0
+          },
+          "disability": {
+            "correlation": -0.0034999883727151754,
+            "ci95": [
+              -0.0317174105593836,
+              0.028552479746256056
+            ],
+            "sign_retention": 0.585
+          },
+          "male": {
+            "correlation": 0.12840710902810043,
+            "ci95": [
+              0.10270274686979462,
+              0.15406872801007465
+            ],
+            "sign_retention": 1.0
+          },
+          "age_35_plus": {
+            "correlation": 0.11868156928371826,
+            "ci95": [
+              0.08704056978410837,
+              0.15064448948382067
+            ],
+            "sign_retention": 1.0
+          },
+          "higher_education": {
+            "correlation": 0.034326736168910965,
+            "ci95": [
+              0.006744695051405999,
+              0.0632061938731858
+            ],
+            "sign_retention": 0.9935
+          },
+          "imd_50_plus": {
+            "correlation": 0.021117098267837486,
+            "ci95": [
+              -0.0052111662303081525,
+              0.05011124499232631
+            ],
+            "sign_retention": 0.9405
+          },
+          "previous_attempts": {
+            "correlation": -0.02499954229359317,
+            "ci95": [
+              -0.04880703995026117,
+              0.0005671098205975195
+            ],
+            "sign_retention": 0.9725
+          }
+        }
+      },
+      "stable_panel": {
+        "threshold": 0.95,
+        "controls": [
+          "male",
+          "age_35_plus",
+          "higher_education",
+          "previous_attempts"
+        ],
+        "targets": {
+          "not_withdrawn": {
+            "raw": 0.12144115547103645,
+            "raw_ci": [
+              0.07398619352962471,
+              0.1688961174124482
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": 0.0034808015140071133,
+            "spread": 0.047323849871658205,
+            "corrected": 0.11796035395702933,
+            "mom_ci": [
+              0.013772542318323436,
+              0.22214816559573525
+            ],
+            "cov_ci": [
+              0.06664163213370639,
+              0.16927907578035228
+            ]
+          },
+          "successful_completion": {
+            "raw": 0.2828022532446724,
+            "raw_ci": [
+              0.2287786502730208,
+              0.336825856216324
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "signed_mean": 0.0034808015140071133,
+            "spread": 0.047323849871658205,
+            "corrected": 0.2793214517306653,
+            "mom_ci": [
+              0.17198237981721776,
+              0.38666052364411285
+            ],
+            "cov_ci": [
+              0.22237872672736653,
+              0.3362641767339641
+            ]
+          }
+        }
+      }
+    }
+  }
+}

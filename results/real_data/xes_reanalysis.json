@@ -1,0 +1,988 @@
+{
+  "settings": {
+    "source": "oulad-bilstm-attention/data/xes3g5m/XES3G5M/question_level/train_valid_sequences_quelevel.csv",
+    "out": "jdsis_reanalysis/results_xes",
+    "early": 30,
+    "middle": 30,
+    "late_max": 40,
+    "late_min": 10,
+    "sample": 6000,
+    "sign_boot": 2000,
+    "fast": false
+  },
+  "provenance": {
+    "source": "oulad-bilstm-attention/data/xes3g5m/XES3G5M/question_level/train_valid_sequences_quelevel.csv",
+    "sha256": "52bb050fbdb3f35cab3fe9e50f58d258d0e8e1794231f9b9026416917166ec83",
+    "source_rows": 30965,
+    "users": 14453,
+    "padding_or_invalid_removed": 1746626,
+    "duplicate_events_removed": 45472,
+    "conflicting_event_keys": 662
+  },
+  "modes": {
+    "fractional": {
+      "flow": {
+        "eligible": 14453,
+        "sampled": 6000,
+        "development": 4800,
+        "holdout": 1200
+      },
+      "designs": {
+        "A": {
+          "flow": {
+            "development_after_design_filter": 4800,
+            "holdout_after_design_filter": 1200,
+            "development_common_support": 4612,
+            "holdout_common_support": 1158
+          },
+          "treated_share": 0.50125,
+          "full_panel": {
+            "target": {
+              "raw": 0.44465109131681735,
+              "raw_ci": [
+                0.4093188369455946,
+                0.4799833456880401
+              ],
+              "orientation": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "signed_mean": 0.2633270470516267,
+              "spread": 0.04503581405391073,
+              "corrected": 0.18132404426519066,
+              "mom_ci": [
+                0.08624665853499215,
+                0.2764014299953892
+              ],
+              "cov_ci": [
+                0.14404643107897547,
+                0.21860165745140586
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_accuracy",
+                  "raw": 0.21674779749283457,
+                  "corrected": -0.062105666078389465,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.19593981159004653,
+                  "holdout_corrected": -0.0829136519811775,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_ability",
+                  "raw": 0.22823433964458067,
+                  "corrected": -0.04679027654272799,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.21687283424706702,
+                  "holdout_corrected": -0.05815178194024165,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_activity",
+                  "raw": 0.3041012650911098,
+                  "corrected": 0.054365624052644196,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.29415385373445735,
+                  "holdout_corrected": 0.04441821269599175,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": 0.30422478597798164,
+                  "corrected": 0.05453031856847326,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.291464329748558,
+                  "holdout_corrected": 0.04176986233904964,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.26650554466293697,
+              "corrected_rmse": 0.054716589028826534,
+              "excluded": 0,
+              "k": 4,
+              "holdout_raw_rmse": 0.25342858026617054,
+              "holdout_corrected_rmse": 0.05910584244939487,
+              "holdout_excluded": 0
+            }
+          },
+          "without_accuracy_and_ability": {
+            "target": {
+              "raw": 0.44465109131681735,
+              "raw_ci": [
+                0.4093188369455946,
+                0.4799833456880401
+              ],
+              "orientation": [
+                1,
+                1
+              ],
+              "signed_mean": 0.3041630255345457,
+              "spread": 0.0,
+              "corrected": 0.14048806578227163,
+              "mom_ci": [
+                0.1051558114110489,
+                0.17582032015349436
+              ],
+              "cov_ci": [
+                0.09976145991098065,
+                0.18121467165356261
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_activity",
+                  "raw": 0.3041012650911098,
+                  "corrected": -0.00012352088687184182,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.29415385373445735,
+                  "holdout_corrected": -0.010070932243524289,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": 0.30422478597798164,
+                  "corrected": 0.00012352088687184182,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.291464329748558,
+                  "holdout_corrected": -0.01263693534255178,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.304163031804789,
+              "corrected_rmse": 0.00012352088687184182,
+              "excluded": 0,
+              "k": 2,
+              "holdout_raw_rmse": 0.29281217971816736,
+              "holdout_corrected_rmse": 0.011426193834901704,
+              "holdout_excluded": 0
+            }
+          },
+          "sign_stability_development": {
+            "marginal": {
+              "late_accuracy": {
+                "correlation": 0.5098106611902942,
+                "ci95": [
+                  0.49064359835665594,
+                  0.5286780874109102
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.7422452176752097,
+                "ci95": [
+                  0.7328294189562905,
+                  0.7522547531407577
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.7722765947053857,
+                "ci95": [
+                  0.7641112385873208,
+                  0.7812230027675663
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": 0.2232393092120112,
+                "ci95": [
+                  0.197105227866333,
+                  0.24912748064909562
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": 0.17334902156316648,
+                "ci95": [
+                  0.14560866288069807,
+                  0.19983893919691625
+                ],
+                "sign_retention": 1.0
+              }
+            },
+            "orientation_changes": {
+              "late_accuracy": {
+                "any_control_flips": 0.0,
+                "per_control_flip_rate": {
+                  "early_accuracy": 0.0,
+                  "early_ability": 0.0,
+                  "early_activity": 0.0,
+                  "early_concept_diversity": 0.0
+                },
+                "signed_estimate_sign_only_ci95": [
+                  0.18132404426519066,
+                  0.18132404426519066
+                ]
+              }
+            },
+            "residualised": {
+              "late_accuracy": {
+                "correlation": 0.26668319446713534,
+                "ci95": [
+                  0.2402554051680559,
+                  0.2929770675901962
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.4702175606628393,
+                "ci95": [
+                  0.4477643038883339,
+                  0.4933061339567024
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.5822029219295052,
+                "ci95": [
+                  0.5636185700245402,
+                  0.6017617612951426
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": 0.5670774208307205,
+                "ci95": [
+                  0.5495108755956523,
+                  0.5842742125522294
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": 0.5491433770708805,
+                "ci95": [
+                  0.5322436759791852,
+                  0.5658582478891604
+                ],
+                "sign_retention": 1.0
+              }
+            }
+          }
+        },
+        "B2": {
+          "flow": {
+            "development_after_design_filter": 4782,
+            "holdout_after_design_filter": 1194,
+            "development_common_support": 4782,
+            "holdout_common_support": 1194
+          },
+          "treated_share": 0.5,
+          "full_panel": {
+            "target": {
+              "raw": -0.006809083920822072,
+              "raw_ci": [
+                -0.0315481957957779,
+                0.01793002795413376
+              ],
+              "orientation": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "signed_mean": -0.02733354697702122,
+              "spread": 0.0,
+              "corrected": 0.02052446305619915,
+              "mom_ci": [
+                -0.004214648818756682,
+                0.04526357493115498
+              ],
+              "cov_ci": [
+                -0.0051814713090135266,
+                0.04623039742141183
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_accuracy",
+                  "raw": -0.01808156529635754,
+                  "corrected": 0.012335975574218241,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.023644908047728293,
+                  "holdout_corrected": 0.006772632822847489,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_ability",
+                  "raw": -0.04046198089334774,
+                  "corrected": -0.017504578555102023,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.03111172958576422,
+                  "holdout_corrected": -0.008154327247518505,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_activity",
+                  "raw": -0.01891424943940137,
+                  "corrected": 0.0112257300501598,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.04845104411021513,
+                  "holdout_corrected": -0.018311064620653957,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": -0.03187639227897824,
+                  "corrected": -0.006057127069276021,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.055388925226085524,
+                  "holdout_corrected": -0.029569660016383306,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.02888757569422916,
+              "corrected_rmse": 0.012462868522654241,
+              "excluded": 0,
+              "k": 4,
+              "holdout_raw_rmse": 0.04166070722957709,
+              "holdout_corrected_rmse": 0.018179806718162578,
+              "holdout_excluded": 0
+            }
+          },
+          "without_accuracy_and_ability": {
+            "target": {
+              "raw": -0.006809083920822072,
+              "raw_ci": [
+                -0.0315481957957779,
+                0.01793002795413376
+              ],
+              "orientation": [
+                1,
+                1
+              ],
+              "signed_mean": -0.025395320859189805,
+              "spread": 0.0,
+              "corrected": 0.018586236938367733,
+              "mom_ci": [
+                -0.006152874936588098,
+                0.04332534881332356
+              ],
+              "cov_ci": [
+                -0.011417572647928566,
+                0.04859004652466403
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_activity",
+                  "raw": -0.01891424943940137,
+                  "corrected": 0.01296214283957687,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.04845104411021513,
+                  "holdout_corrected": -0.016574651831236888,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": -0.03187639227897824,
+                  "corrected": -0.01296214283957687,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.055388925226085524,
+                  "holdout_corrected": -0.03647467578668415,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.026209284772568658,
+              "corrected_rmse": 0.01296214283957687,
+              "excluded": 0,
+              "k": 2,
+              "holdout_raw_rmse": 0.05203574114524989,
+              "holdout_corrected_rmse": 0.02832949926375727,
+              "holdout_excluded": 0
+            }
+          },
+          "sign_stability_development": {
+            "marginal": {
+              "late_accuracy": {
+                "correlation": 0.5285346229085763,
+                "ci95": [
+                  0.510354447188891,
+                  0.5460980131438589
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.7477254407376259,
+                "ci95": [
+                  0.7385732764674493,
+                  0.7565688984592925
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.7756650243470877,
+                "ci95": [
+                  0.7674781259721204,
+                  0.7834312189656477
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": 0.1852029554609243,
+                "ci95": [
+                  0.16018197524845637,
+                  0.21245263301604883
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": 0.1345305482645591,
+                "ci95": [
+                  0.10782547341787711,
+                  0.16208003653572112
+                ],
+                "sign_retention": 1.0
+              }
+            },
+            "orientation_changes": {
+              "late_accuracy": {
+                "any_control_flips": 0.0,
+                "per_control_flip_rate": {
+                  "early_accuracy": 0.0,
+                  "early_ability": 0.0,
+                  "early_activity": 0.0,
+                  "early_concept_diversity": 0.0
+                },
+                "signed_estimate_sign_only_ci95": [
+                  0.02052446305619915,
+                  0.02052446305619915
+                ]
+              }
+            },
+            "residualised": {
+              "late_accuracy": {
+                "correlation": 0.26737278482149796,
+                "ci95": [
+                  0.24126644552348736,
+                  0.2934384857546427
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.46692825376741715,
+                "ci95": [
+                  0.4443055893690479,
+                  0.4891063247758107
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.5756864096396404,
+                "ci95": [
+                  0.556353348104562,
+                  0.5942847554858851
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": 0.5555753699047734,
+                "ci95": [
+                  0.5393856604599081,
+                  0.5725545826753745
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": 0.5363919260193681,
+                "ci95": [
+                  0.5195221224125443,
+                  0.5530726113661367
+                ],
+                "sign_retention": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "fixed": {
+      "flow": {
+        "eligible": 14453,
+        "sampled": 6000,
+        "development": 4800,
+        "holdout": 1200
+      },
+      "designs": {
+        "A": {
+          "flow": {
+            "development_after_design_filter": 4800,
+            "holdout_after_design_filter": 1200,
+            "development_common_support": 4790,
+            "holdout_common_support": 1200
+          },
+          "treated_share": 0.5402083333333333,
+          "full_panel": {
+            "target": {
+              "raw": 0.3687055307065936,
+              "raw_ci": [
+                0.3348856821136113,
+                0.40252537929957594
+              ],
+              "orientation": [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              "signed_mean": 0.013557836108305125,
+              "spread": 0.07877372467608654,
+              "corrected": 0.3551476945982885,
+              "mom_ci": [
+                0.1970933197017124,
+                0.5132020694948646
+              ],
+              "cov_ci": [
+                0.31673058255571296,
+                0.393564806640864
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_accuracy",
+                  "raw": 0.06368450744842553,
+                  "corrected": 0.0668355617868272,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.04661554215858452,
+                  "holdout_corrected": 0.0497665964969862,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_ability",
+                  "raw": 0.09931847489932655,
+                  "corrected": 0.11434751838802856,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.08926074679140963,
+                  "holdout_corrected": 0.10428979028011165,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_activity",
+                  "raw": 0.06270620556476249,
+                  "corrected": 0.10168538889742348,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.11028199032479952,
+                  "holdout_corrected": 0.1492611736574605,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": 0.04606543234976908,
+                  "corrected": 0.07949769127743228,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.03461450851496462,
+                  "holdout_corrected": 0.06804676744262782,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.07066464501286716,
+              "corrected_rmse": 0.09246911445791443,
+              "excluded": 0,
+              "k": 4,
+              "holdout_raw_rmse": 0.0766498063895641,
+              "holdout_corrected_rmse": 0.10032738285801783,
+              "holdout_excluded": 0
+            }
+          },
+          "without_accuracy_and_ability": {
+            "target": {
+              "raw": 0.3687055307065936,
+              "raw_ci": [
+                0.3348856821136113,
+                0.40252537929957594
+              ],
+              "orientation": [
+                -1,
+                -1
+              ],
+              "signed_mean": -0.05438581895726578,
+              "spread": 0.0,
+              "corrected": 0.4230913496638594,
+              "mom_ci": [
+                0.3892715010708771,
+                0.45691119825684173
+              ],
+              "cov_ci": [
+                0.3762108783511601,
+                0.4699718209765587
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_activity",
+                  "raw": 0.06270620556476249,
+                  "corrected": 0.01664077321499341,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.11028199032479952,
+                  "holdout_corrected": 0.06421655797503044,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": 0.04606543234976908,
+                  "corrected": -0.01664077321499341,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.03461450851496462,
+                  "holdout_corrected": -0.028091697049797866,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.055018598100557786,
+              "corrected_rmse": 0.01664077321499341,
+              "excluded": 0,
+              "k": 2,
+              "holdout_raw_rmse": 0.0817321282903233,
+              "holdout_corrected_rmse": 0.049562635933221244,
+              "holdout_excluded": 0
+            }
+          },
+          "sign_stability_development": {
+            "marginal": {
+              "late_accuracy": {
+                "correlation": 0.46395061200726206,
+                "ci95": [
+                  0.4423137164757226,
+                  0.4844350373860771
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.7511307196914552,
+                "ci95": [
+                  0.742538140429829,
+                  0.7604894038672948
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.7921979613787513,
+                "ci95": [
+                  0.7849019693846304,
+                  0.7994767803866666
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": -0.05409839588835205,
+                "ci95": [
+                  -0.08214510005272732,
+                  -0.025568722647530982
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": -0.05481149020141594,
+                "ci95": [
+                  -0.08295642615344168,
+                  -0.02523877945321977
+                ],
+                "sign_retention": 1.0
+              }
+            },
+            "orientation_changes": {
+              "late_accuracy": {
+                "any_control_flips": 0.0,
+                "per_control_flip_rate": {
+                  "early_accuracy": 0.0,
+                  "early_ability": 0.0,
+                  "early_activity": 0.0,
+                  "early_concept_diversity": 0.0
+                },
+                "signed_estimate_sign_only_ci95": [
+                  0.3551476945982885,
+                  0.3551476945982885
+                ]
+              }
+            },
+            "residualised": {
+              "late_accuracy": {
+                "correlation": 0.17273920185848735,
+                "ci95": [
+                  0.14675844930113613,
+                  0.19809146023453122
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.30800130349016724,
+                "ci95": [
+                  0.28175261133984086,
+                  0.33379776728077226
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.5106632041106444,
+                "ci95": [
+                  0.4897593800852195,
+                  0.5302777940657503
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": -0.03463304957789983,
+                "ci95": [
+                  -0.06158959330774897,
+                  -0.006039326956402804
+                ],
+                "sign_retention": 0.992
+              },
+              "early_concept_diversity": {
+                "correlation": 0.19151053523694903,
+                "ci95": [
+                  0.16539631674608563,
+                  0.21839801753255142
+                ],
+                "sign_retention": 1.0
+              }
+            }
+          }
+        },
+        "B2": {
+          "flow": {
+            "development_after_design_filter": 4329,
+            "holdout_after_design_filter": 1080,
+            "development_common_support": 4329,
+            "holdout_common_support": 1080
+          },
+          "treated_share": 0.5001155001155001,
+          "full_panel": {
+            "target": {
+              "raw": 0.010929559721209377,
+              "raw_ci": [
+                -0.015815431581126,
+                0.03767455102354475
+              ],
+              "orientation": [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              "signed_mean": -0.05723257890537759,
+              "spread": 0.12082834324458569,
+              "corrected": 0.06816213862658697,
+              "mom_ci": [
+                -0.17016248988604415,
+                0.30648676713921813
+              ],
+              "cov_ci": [
+                0.03868516382547064,
+                0.09763911342770332
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_accuracy",
+                  "raw": -0.013684358334917978,
+                  "corrected": 0.058064294093946145,
+                  "excludes_zero": false,
+                  "holdout_raw": 0.025201541037882854,
+                  "holdout_corrected": 0.09695019346674698,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_ability",
+                  "raw": -0.0486750948192549,
+                  "corrected": 0.011409978781496924,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.03941550896068753,
+                  "holdout_corrected": 0.020669564640064295,
+                  "holdout_excludes_zero": false
+                },
+                {
+                  "control": "early_activity",
+                  "raw": 0.22633893517907025,
+                  "corrected": 0.2254751416982569,
+                  "excludes_zero": true,
+                  "holdout_raw": 0.2290540843821621,
+                  "holdout_corrected": 0.22819029090134874,
+                  "holdout_excludes_zero": true
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": -0.059768072711732755,
+                  "corrected": -0.1560008688228138,
+                  "excludes_zero": false,
+                  "holdout_raw": -0.07439655468341794,
+                  "holdout_corrected": -0.17062935079449898,
+                  "holdout_excludes_zero": false
+                }
+              ],
+              "raw_rmse": 0.1197477166926078,
+              "corrected_rmse": 0.1402470681170771,
+              "excluded": 1,
+              "k": 4,
+              "holdout_raw_rmse": 0.12266755982963422,
+              "holdout_corrected_rmse": 0.1508407729443898,
+              "holdout_excluded": 1
+            }
+          },
+          "without_accuracy_and_ability": {
+            "target": {
+              "raw": 0.010929559721209377,
+              "raw_ci": [
+                -0.015815431581126,
+                0.03767455102354475
+              ],
+              "orientation": [
+                -1,
+                -1
+              ],
+              "signed_mean": -0.08328543123366874,
+              "spread": 0.201753750526909,
+              "corrected": 0.09421499095487812,
+              "mom_ci": [
+                -0.302118513190039,
+                0.49054849509979526
+              ],
+              "cov_ci": [
+                0.05758135818150203,
+                0.1308486237282542
+              ]
+            },
+            "loco": {
+              "rows": [
+                {
+                  "control": "early_activity",
+                  "raw": 0.22633893517907025,
+                  "corrected": 0.286107007890803,
+                  "excludes_zero": true,
+                  "holdout_raw": 0.2290540843821621,
+                  "holdout_corrected": 0.28882215709389486,
+                  "holdout_excludes_zero": true
+                },
+                {
+                  "control": "early_concept_diversity",
+                  "raw": -0.059768072711732755,
+                  "corrected": -0.286107007890803,
+                  "excludes_zero": true,
+                  "holdout_raw": -0.07439655468341794,
+                  "holdout_corrected": -0.3007354898624882,
+                  "holdout_excludes_zero": true
+                }
+              ],
+              "raw_rmse": 0.16553177352652018,
+              "corrected_rmse": 0.286107007890803,
+              "excluded": 2,
+              "k": 2,
+              "holdout_raw_rmse": 0.1702947752001121,
+              "holdout_corrected_rmse": 0.2948390012288073,
+              "holdout_excluded": 2
+            }
+          },
+          "sign_stability_development": {
+            "marginal": {
+              "late_accuracy": {
+                "correlation": 0.4710705988906614,
+                "ci95": [
+                  0.4488734395573351,
+                  0.4926049601591807
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.7579430250098187,
+                "ci95": [
+                  0.7480278140214807,
+                  0.7672205952671896
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.7933693038716765,
+                "ci95": [
+                  0.7852317992079889,
+                  0.8012254332137183
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": -0.05594790848138222,
+                "ci95": [
+                  -0.08689605425687846,
+                  -0.026383900613853508
+                ],
+                "sign_retention": 1.0
+              },
+              "early_concept_diversity": {
+                "correlation": -0.055795457834432856,
+                "ci95": [
+                  -0.08692783283074527,
+                  -0.025509172320694492
+                ],
+                "sign_retention": 1.0
+              }
+            },
+            "orientation_changes": {
+              "late_accuracy": {
+                "any_control_flips": 0.0,
+                "per_control_flip_rate": {
+                  "early_accuracy": 0.0,
+                  "early_ability": 0.0,
+                  "early_activity": 0.0,
+                  "early_concept_diversity": 0.0
+                },
+                "signed_estimate_sign_only_ci95": [
+                  0.06816213862658697,
+                  0.06816213862658697
+                ]
+              }
+            },
+            "residualised": {
+              "late_accuracy": {
+                "correlation": 0.1783819724217908,
+                "ci95": [
+                  0.15011999450068414,
+                  0.206257797490125
+                ],
+                "sign_retention": 1.0
+              },
+              "early_accuracy": {
+                "correlation": 0.3259109611218977,
+                "ci95": [
+                  0.29873076948132277,
+                  0.35552650570944266
+                ],
+                "sign_retention": 1.0
+              },
+              "early_ability": {
+                "correlation": 0.5138610647680587,
+                "ci95": [
+                  0.49144993614018173,
+                  0.5353442187301083
+                ],
+                "sign_retention": 1.0
+              },
+              "early_activity": {
+                "correlation": -0.01832717219262933,
+                "ci95": [
+                  -0.04704010582446516,
+                  0.010665949292159959
+                ],
+                "sign_retention": 0.888
+              },
+              "early_concept_diversity": {
+                "correlation": 0.25648566372986986,
+                "ci95": [
+                  0.2293649473908816,
+                  0.28158582352359174
+                ],
+                "sign_retention": 1.0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

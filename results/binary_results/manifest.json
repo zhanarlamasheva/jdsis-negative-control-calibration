@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 55.69,
+  "summary_rows": 24,
+  "replication_rows": 12000,
+  "verification": "passed",
+  "sha256": {
+    "replications.csv": "d9040e687a71f2ffe6b49177555362c531194fbde2c7cf6fcae4ab4e73ba9ace",
+    "summary.csv": "fc13dc37eaaed98e3c5a033036522b6dd309e61a35e647c4b6a481f86aa9fc46"
+  }
+}

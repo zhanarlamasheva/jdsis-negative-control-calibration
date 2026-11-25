@@ -1,0 +1,76 @@
+{
+  "seed": 20261031,
+  "n": 2000,
+  "replications": 500,
+  "alphas": [
+    0.0,
+    0.5
+  ],
+  "scenarios": [
+    {
+      "name": "matched",
+      "w": [
+        1.0,
+        0.0
+      ],
+      "ly": [
+        0.8,
+        0.0
+      ],
+      "loadings": [
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "name": "weak",
+      "w": [
+        1.0,
+        0.0
+      ],
+      "ly": [
+        0.8,
+        0.0
+      ],
+      "loadings": [
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4
+      ]
+    },
+    {
+      "name": "dominant",
+      "w": [
+        1.0,
+        0.0
+      ],
+      "ly": [
+        0.8,
+        0.0
+      ],
+      "loadings": [
+        3.2,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  ],
+  "numpy": "2.2.6",
+  "crossfit_folds": 2,
+  "propensity_bounds": [
+    0.02,
+    0.98
+  ],
+  "source_sha256": "946bd29fd0dafbf4b503e6dc9adb18cc96d11d6ebfb3d7726c9b68b0235441fa",
+  "protocol_sha256": "52a2f5cd4fcf7bf3263b500fa20322680760e501efff00dec4019e3f818877d7"
+}
