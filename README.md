@@ -1,7 +1,7 @@
-# Sign-aware negative-control calibration in educational data mining
+# When can negative controls correct bias in educational data mining?
 
 Code, saved outputs and simulations for the article
-*Sign-Aware Negative-Control Calibration in Educational Data Mining: Conditions, Diagnostics and Limits*
+*When Can Negative Controls Correct Bias in Educational Data Mining? Conditions, Diagnostics and Limits of Sign-Aware Calibration*
 (manuscript under review).
 
 The repository contains no student records. OULAD and XES3G5M must be obtained from their original publishers.
